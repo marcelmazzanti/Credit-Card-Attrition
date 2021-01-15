@@ -1,6 +1,6 @@
 ---
 title: "Credit Card Attrition"
-authors: "Marcello Mazzanti and Maxence Meissirel (Team 21)"
+authors: "Marcello Mazzanti"
 output:
   html_notebook:
     highlight: pygments
