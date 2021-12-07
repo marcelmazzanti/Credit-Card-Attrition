@@ -5,7 +5,7 @@ Using a dataset provided by a bank, several variables are analyzed as predictors
 After the 2008 crisis, the financial sector and credit card market is more and more witnessing high volatility, acquiring new customers can now cost up to 7 times more than retaining one, which means that losing customers can be a large financial loss.
 
 ## Data Analysis
-After looking at demographics and all data involving the bank and customers, the following result to be the most relevant variables:
+After looking at demographics to maek sure there was no big disparity in the data that could work as confounding factor, the following resulted to be the most relevant variables:
 
 ### Relationship Count
 Taking into consideration the number of products held by a client, it seems true that customers with more products have a lower ratio of attrition.
