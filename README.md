@@ -49,7 +49,7 @@ However, the possible presence of confounding factors these numbers are also lik
 
 <img width="833" alt="logaccuracy" src="https://user-images.githubusercontent.com/77210085/144942472-3e25fd64-7cef-41ba-9104-6ff3e98b8dff.png">
 
-Accuracy is 89% which is significantly high, this might again come from the fact that the majority of observations are not lost customers (the ones that are mostly predicted correctly).
+It seems that the majority of customers staying with the bank where correctly predicted, however, lost customers show a widely spread distribution over the risk of attrition, indicating a far less precise prediction. Accuracy is 89% which is significantly high, this might again come from the fact that the majority of observations are not lost customers (the ones that are mostly predicted correctly).
 
 
 ### Limitations
