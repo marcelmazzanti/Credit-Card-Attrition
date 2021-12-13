@@ -40,6 +40,9 @@ The high majority of lost customers tend to have much lower revolving balances.
 <img width="820" alt="revolvingbalance" src="https://user-images.githubusercontent.com/77210085/144941507-dd4bb0b1-0028-4e1a-bb83-baa905dbb35e.png">
 
 ## Regression
+
+<img width="715" alt="Screenshot 2021-12-13 at 16 30 20" src="https://user-images.githubusercontent.com/77210085/145892002-40d49693-97cd-48e6-9224-02385fe1b21d.png">
+
 <img width="822" alt="logreg" src="https://user-images.githubusercontent.com/77210085/144941735-1237c79b-51c1-453e-987c-85457b509190.png">
 
 A logistic regression with Frank Harrell’s method was used to gain some indicators. Disctimination indexes have been found as follow:
@@ -47,9 +50,22 @@ Dxy = 0.8, this represents the correlation between predicted and observed values
 C-index = 0.9, representing the quality of prediction (0.5 would be a random prediction), pointing again at a very good classificatory quality.
 However, the possible presence of confounding factors these numbers are also likely to be indicators of an overoptimistic model. Plotting the distribution of the predicted leaving customer by observed leaving customers it is possible to see how many would be correctly guessed with this model:
 
-<img width="833" alt="logaccuracy" src="https://user-images.githubusercontent.com/77210085/144942472-3e25fd64-7cef-41ba-9104-6ff3e98b8dff.png">
+<img width="820" alt="logaccuracy" src="https://user-images.githubusercontent.com/77210085/144942472-3e25fd64-7cef-41ba-9104-6ff3e98b8dff.png">
 
-It seems that the majority of customers staying with the bank where correctly predicted, however, lost customers show a widely spread distribution over the risk of attrition, indicating a far less precise prediction. Accuracy is 89% which is significantly high, this might again come from the fact that the majority of observations are not lost customers (the ones that are mostly predicted correctly).
+It seems that the majority of customers staying with the bank where correctly predicted, however, lost customers show a widely spread distribution over the risk of attrition, indicating a far less precise prediction. Accuracy is 89% which is significantly high, this might again come from the fact that the majority of observations are not lost customers (the ones that are mostly predicted correctly). However it is important to check accuracy for each type of error.
+
+<img width="820" alt="Screenshot 2021-12-13 at 16 33 22" src="https://user-images.githubusercontent.com/77210085/145892708-c5e4589a-1aa7-4df1-a593-952de4b25979.png">
+
+
+After running a confusion matrix and testing, the accuracy resulted to be at 51%, the problem with this result is that, as stated, it is very expensive to lose customers and acquire new ones as compared to retain existing ones. The probability of a Type 1 error (trying to retain a client when not necessary) is far less financially risky than a Type 2 error (not trying to retain a customer when it is needed). Following this model the probabilities of committing a Type 2 error are consistently higher than those of committing a Type 1 error.
+
+## Coclusions
+
+- The coefficients indicate that the number of contacts made with the bank in the last 12 months is the most relevant predictor
+- The second most important predictor is the inactivity of a client, those that have been inactive for a longer than average time should be involved and target with retaining strategies
+- The next predictor to consider is the number of products held, trying to augment the extent of the relationship with a customer can function as a way to strengthen the relationship and enhance commitment
+- Customers that are making a lower than usual number of transactions are also important to target with retaining strategies.
+- Considering Revolving balance and the amount spent for each transaction, the coefficients indicate that the influence of these variables on the attrition probability is very low, but when needed to be assessed, customers to target are those with a low revolving balance and higher transactions amount
 
 
 ### Limitations
